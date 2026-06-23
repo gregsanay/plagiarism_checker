@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400">
+  <rect width="1000" height="400" rx="12" fill="#f3f4f6" />
+  <rect x="16" y="16" width="968" height="120" rx="8" fill="#ffffff" stroke="#e6eef8" />
+  <rect x="16" y="152" width="468" height="220" rx="8" fill="#ffffff" stroke="#e6eef8" />
+  <rect x="504" y="152" width="480" height="220" rx="8" fill="#ffffff" stroke="#e6eef8" />
+  <text x="32" y="56" font-family="Inter, Arial, sans-serif" font-size="20" fill="#0f172a">Plagiarism Checker — UI preview</text>
+  <text x="32" y="86" font-family="Inter, Arial, sans-serif" font-size="12" fill="#6b7280">This is a placeholder screenshot. Replace with an actual screenshot at static/screenshot.png</text>
+</svg>

@@ -4,6 +4,9 @@
 
 A small, local-first web demo to compare a student draft against an article URL and produce simple paraphrases. The project is intentionally lightweight so users can run it locally and choose the ML engine they prefer (local PyTorch models, a remote inference API, or the built-in offline fallback).
 
+![UI screenshot](static/screenshot-placeholder.svg)
+
+
 ## Why local-first
 
 - **Privacy:** student drafts should not be sent to third-party services by default.
