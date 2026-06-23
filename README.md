@@ -1,3 +1,5 @@
+[![CI](https://github.com/gregsanay/plagiarism_checker/actions/workflows/ci.yml/badge.svg)](https://github.com/gregsanay/plagiarism_checker/actions/workflows/ci.yml)
+
 # Plagiarism Checker + Paraphraser
 
 A small, local-first web demo to compare a student draft against an article URL and produce simple paraphrases. The project is intentionally lightweight so users can run it locally and choose the ML engine they prefer (local PyTorch models, a remote inference API, or the built-in offline fallback).
@@ -42,6 +44,25 @@ Then restart the app. The app checks `ALLOW_MODEL_DOWNLOAD` and will set the Tra
 - `T5-large` paraphrase model: several GB
 
 If you prefer not to download models automatically, see the Models section below for instructions to place models in the local cache.
+
+## Releases & model bundles
+
+This repository intentionally omits large model files. If you'd like to distribute model binaries to users, consider one of these approaches:
+
+- Create a GitHub Release and attach the model bundle as a release asset (recommended for small numbers of artifacts).
+- Host model files on a cloud storage bucket (S3, GCS) and link from a release or `models/README.md`.
+- Use Git LFS to track large binaries. To enable LFS, run on your machine:
+
+```bash
+git lfs install
+git lfs track "*.bin" "*.ckpt" "*.pth" "*.pt" "models/**"
+git add .gitattributes
+git commit -m "Track model binaries with Git LFS"
+```
+
+Then push as usual; GitHub will store LFS objects separately from the Git repository.
+
+If you'd like, I can prepare a release draft and provide instructions for packaging a model bundle for users.
 
 ## Using your own model or engine
 
