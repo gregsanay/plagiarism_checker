@@ -65,8 +65,6 @@ git commit -m "Track model binaries with Git LFS"
 
 Then push as usual; GitHub will store LFS objects separately from the Git repository.
 
-If you'd like, I can prepare a release draft and provide instructions for packaging a model bundle for users.
-
 ## Using your own model or engine
 
 Options:
