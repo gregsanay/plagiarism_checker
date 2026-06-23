@@ -1,16 +1,46 @@
-/.venv
+# Virtual environments
+.venv/
 venv/
+env/
+ENV/
+
+# Python cache / bytecode
 __pycache__/
 *.py[cod]
-.pytest_cache/
+*.pyo
+*.pyd
+
+# Editor / OS
+.vscode/
+.idea/
 .DS_Store
+*.swp
+
+# Test / build artifacts
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# Environment files
 .env
+.env.*
+
+# Database / local stores
 *.sqlite3
-# Hugging Face cache
-/.cache/huggingface
-/.cache/huggingface/*
-# models directory if used
-/models/
-# Git LFS pointer files (if you use LFS for models)
+
+# Hugging Face / transformers cache (local model files)
+.cache/huggingface/
+.cache/huggingface/*
+
+# Optional models folder (if you keep local model bundles separate)
+models/
+
+# Large binary checkpoints
 *.bin
 *.ckpt
+*.pth
+*.pt
+
+# Git LFS pointer files (if you use LFS for models)
+*.gitattributes
