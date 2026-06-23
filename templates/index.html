@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Plagiarism Checker + Paraphraser</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>📝 Plagiarism Checker</h1>
+            <p class="subtitle">Compare student text against an article URL and generate safe paraphrases.</p>
+        </header>
+
+        <main class="card">
+            <form method="post" class="form-grid">
+                <label class="label">Article URL</label>
+                <input name="url" class="input" value="{{ url }}">
+
+                <label class="label">Student Draft</label>
+                <textarea name="student_text" class="textarea">{{ student_text }}</textarea>
+
+                <div class="actions">
+                    <button name="action" value="compare" type="submit" class="btn primary">Compare</button>
+                    <button name="action" value="paraphrase" type="submit" class="btn">Paraphrase</button>
+                </div>
+            </form>
+        </main>
+
+        <section class="results card">
+            <h2 class="results-title">Result</h2>
+            <div class="results-body">{{ result|safe }}</div>
+        </section>
+
+        <footer class="site-footer">Local-only model: no large downloads by default. See README for details.</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/.venv
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.env
+*.sqlite3
+# Hugging Face cache
+/.cache/huggingface
+/.cache/huggingface/*
+# models directory if used
+/models/
+# Git LFS pointer files (if you use LFS for models)
+*.bin
+*.ckpt

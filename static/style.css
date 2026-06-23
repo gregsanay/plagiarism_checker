@@ -1,0 +1,150 @@
+:root {
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #0b5cff;
+    --accent-2: #0077b6;
+    --border: rgba(15, 23, 42, 0.06);
+    --radius: 10px;
+    --max-width: 920px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, var(--bg), #ffffff);
+    color: #0f172a;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 36px auto;
+    padding: 16px
+}
+
+.site-header {
+    margin-bottom: 18px
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.95rem
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04)
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px
+}
+
+.label {
+    font-weight: 600;
+    color: #0f172a
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e6eef8;
+    background: #fbfcff
+}
+
+.textarea {
+    min-height: 160px;
+    resize: vertical
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 6px
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--accent-2);
+    cursor: pointer
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 6px 10px rgba(11, 92, 255, 0.12)
+}
+
+.btn:hover {
+    opacity: 0.95
+}
+
+.results-title {
+    margin: 0 0 8px 0;
+    font-size: 1rem
+}
+
+.results-body {
+    color: var(--muted);
+    white-space: pre-wrap
+}
+
+.site-footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 12px
+}
+
+@media (min-width:720px) {
+    .form-grid {
+        grid-template-columns: 1fr
+    }
+
+    .actions {
+        justify-content: flex-end
+    }
+}
+
+@media (max-width:520px) {
+    .container {
+        padding: 12px;
+        margin: 18px auto
+    }
+
+    .site-header h1 {
+        font-size: 1.25rem
+    }
+}
+
+/* Accessibility tweaks */
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid rgba(11, 92, 255, 0.12);
+    outline-offset: 2px
+}

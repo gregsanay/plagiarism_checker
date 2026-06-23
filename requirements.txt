@@ -1,0 +1,7 @@
+flask
+requests
+beautifulsoup4
+transformers
+sentencepiece
+scikit-learn
+rapidfuzz
