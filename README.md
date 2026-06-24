@@ -128,14 +128,6 @@ Contributions are welcome. Please open issues for bugs or feature requests. If y
 
 This project is provided under the MIT License. See `LICENSE`.
 
-## Further help
-
-If you want, I can:
-
-- add a CI workflow to run unit tests and lint checks,
-- prepare a `CONTRIBUTING.md` with developer setup steps,
-- add a small example to show how to download and cache a model locally.
-
 # Plagiarism Checker + Paraphraser
 
 Minimal demo app to compare student text with an article URL and produce simple paraphrases.
